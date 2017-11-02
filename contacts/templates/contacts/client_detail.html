@@ -1,0 +1,25 @@
+{% extends 'contacts/base.html' %}
+
+{% block content %}
+    <div class="post">
+
+        <h1>{{ client.nom }} </h1>
+        <p>{{ client.prenom }}</p>
+
+        <p>
+            
+            <img title="{{ client.nom }}" 
+                src="{{ MEDIA_URL }}/media/{{ client.image }}" 
+                width="150px" height="150px" border="1" /> 
+            
+            </p>
+        <p>{{ client.email }}</p>
+        <p>{{ client.telephone }}</p>
+        <p>{{ client.facebook }}</p>
+        <p>{{ client.whatsap }}</p>
+        <p>{{ client.remarques }}</p>
+    </div>
+
+    <a class="btn btn-default" href="{% url 'client_edit' pk=client.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+
+{% endblock %}

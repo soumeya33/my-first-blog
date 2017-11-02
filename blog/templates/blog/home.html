@@ -1,0 +1,14 @@
+{% extends 'blog/base1.html' %}
+<link rel="stylesheet" href="{{ STATIC_URL }}static/css/blog.css">
+
+{% block content %}
+
+   
+    <div class="post">
+
+        <p> <a href="{% url 'importateur_new' %}" class="top-menu">   <h1> Importateurs </h1>  </a> </p>
+    <p> <a href="{% url 'importateur_list' %}" class="top-menu">  <h1> Importateur list </h1> </a> </p>
+    </div>
+
+
+{% endblock %}

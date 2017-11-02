@@ -1,0 +1,26 @@
+{% extends 'contacts/base.html' %}
+
+{% block content %}
+    {% for client in posts %}
+        <div class="post">
+            <div class="date">
+<div class="article_div">
+        <h1>{{ client.nom }} </h1>    
+            <div style="padding: 5px; text-align: center; margin-top: 10px;"> <img title="{{ client.nom }}" 
+            	src="{{ client.image.url }}" 
+            	width="150px" height="150px" border="1" /> </div>
+         
+        <p>{{ client.prenom }}</p>
+        <p>{{ client.image }}</p>
+        <p>{{ client.email }}</p>
+        <p>{{ client.telephone }}</p>
+        <p>{{ client.facebook }}</p>
+        <p>{{ client.whatsap }}</p>
+        <p>{{ client.remarques }}</p>
+            </div>
+            <h1><a href="{% url 'client_detail' pk=client.pk %}">{{ client.nom }}</a></h1>
+
+            
+        </div>
+    {% endfor %}
+{% endblock %}

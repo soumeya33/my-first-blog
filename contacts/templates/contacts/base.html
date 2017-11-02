@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{ STATIC_URL }}/static/css/blog.css">
+
+<div class="container" style="margin: 10px auto; width: 1300px; background-color: gray; padding: 15px; border: 2px outset lightgrey;">
+    <div id="header">
+        <div id="header-logo" >
+            <a href="/">
+                <img style="margin-right: 20px;" title="Django" src="{{ STATIC_URL }}/static/images/logo.jpg" alt="Django" align="absmiddle" />
+                <span style="font-size: 36px;"> <font color="white"> <I> Gestion des contacts </I></font></span>
+            </a>
+        </div>
+        <div id="header-navigation" style="float: right;" > <a href="/accueil"> <font color="red"> Home </font>  </a> | <a href="/admin"><font color="red"> Admin </font></a></div>
+    </div>
+    
+</div>
+{% block content %}{% endblock %}

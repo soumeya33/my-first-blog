@@ -1,0 +1,16 @@
+{% extends 'blog/base1.html' %}
+<link rel="stylesheet" href="{{ STATIC_URL }}static/css/blog.css">
+
+{% block content %}
+    <div class="post">
+
+        <h1>{{ importateur.matricule }}</h1>
+        <p>{{ importateur.description}}</p>
+        <p>{{ importateur.email}}</p>
+        <p>{{ importateur.telephone}}</p>
+
+    </div>
+
+    <a class="btn btn-default" href="{% url 'importateur_edit' pk=importateur.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+
+{% endblock %}

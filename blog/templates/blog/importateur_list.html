@@ -1,0 +1,33 @@
+{% extends 'blog/base1.html' %}
+
+{% block content %}
+    --Sélectionnez un sport --
+
+{% for sport in sports %}
+
+{{ sport.name }}
+
+{% endfor %}
+
+&nbsp;&nbsp;
+
+<input type="submit" value="Search" />&nbsp;&nbsp;
+<input type="reset" value="Reset" />
+<!-- … -->
+    {% for importateur in importateur %}
+        <div class="article_div">
+            <h2>{{ importateur.matricule }}</h2>
+            <div style="padding: 5px; text-align: center; margin-top: 10px;"><img title="{{ importateur.description }}" src="/site-media/{{ importateur.email }}" alt="{{ importateur.telephone }}" width="150px" height="150px" border="1" /></div>
+            <div style="text-align: center; height: 15px; margin-top: 17px; font-size: 15px;">{{ importateur.matricule }} &euro;
+            {{ importateur.matricule }}</div>
+        </div>
+
+{% endfor %}
+
+
+   
+
+{% endblock %}
+
+
+
